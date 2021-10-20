@@ -1,0 +1,151 @@
+:root {
+    --nav-pt: 0.5em;
+}
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(45deg, #4287f5, #1452b5);
+}
+
+nav, nav li {
+    display: inline-flex;
+    justify-content: space-between;
+    
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+nav span {
+    font-size: 32px;
+    padding-left: 2.5em;
+}
+
+nav li {
+    font-size: 24px;
+    margin-right: 5em;
+    position: relative;
+}
+
+nav li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+}
+
+@keyframes underline-grow {
+    0% {width: 0%;}
+    100% {width: 100%; }
+}
+
+nav li:hover:after {
+    background-color: black;
+    animation: underline-grow 0.5s ease-in;
+}
+.header-cont {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-cont .outer-span {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+@keyframes type-anim {
+    0%, 5% {content: '';}
+    7% {content: 'D';}
+    9% {content: 'De';}
+    11% {content: 'Dev';}
+    13% {content: 'Deve';}
+    15% {content: 'Devel';}
+    17% {content: 'Develo';}
+    19% {content: 'Develop';}
+    21% {content: 'Develope';}
+    23%, 38% {content: 'Developer';}
+    39% {content: 'Develope';}
+    40% {content: 'Develop';}
+    41% {content: 'Develo';}
+    42% {content: 'Devel';}
+    43% {content: 'Deve';}
+    44% {content: 'Dev';}
+    45% {content: 'De';}
+    46% {content: 'D';}
+    47%, 57% {content: '';}
+    59% {content: 'S';}
+    61% {content: 'St';}
+    63% {content: 'Stu';}
+    65% {content: 'Stud';}
+    67% {content: 'Stude';}
+    69% {content: 'Studen';}
+    71%, 86% {content: 'Student';}
+    87% {content: 'Studen';}
+    88% {content: 'Stude';}
+    89% {content: 'Stud';}
+    90% {content: 'Stu';}
+    91% {content: 'St';}
+    92% {content: 'S';}
+    93%, 100% {content: '';}
+}
+
+.header-cont .inner-span {
+    position: relative;
+}
+
+.header-cont .inner-span::before {
+    font-size: 32px;
+    content: '';
+    animation: type-anim 10s infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
+}
+
+.header-cont .inner-span::after {
+    position: absolute;
+    color: black;
+    font-size: 32px;
+    margin: -3px;
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+/* nav li {
+    font-size: 0;
+} */
