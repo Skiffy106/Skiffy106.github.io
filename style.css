@@ -58,12 +58,6 @@ nav li {
     position: relative;
 }
 
-/* @media (max-width: 1200px) {
-    nav li {
-        margin-right: 0.75em;
-    }
-} */
-
 @media (max-width: 1000px) {
     nav li {
         margin-right: 2em;
